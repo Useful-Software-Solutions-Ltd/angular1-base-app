@@ -1,35 +1,28 @@
-﻿<div ng-controller="ShellController">
-    <sk-top-nav></sk-top-nav>
-    <div class="container">
-        <div id="content">
-            <div id="splashScreen" class="loader row" ng-show="false">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center">loading...</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="spinner-large-container">
-                            <div class="spinner spinner-large" style="height: 50px; width: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div ng-view class="fade-animation"></div>
-        </div>
-        <div class="container" ng-show="true">
-            <hr />
-            <footer class="footer">
-                <div class="row">
-                    <div class="col-md-5 col-md-offset-1">
-                        <span class="text-muted">AngularJs starter kit</span>
-                    </div>
-                    <div class="col-md-5 hidden-sm hidden-xs">
-                        <span class="text-muted pull-right">&copy 2015 Useful Software Solutions</span>
-                    </div>
-                </div>
-            </footer>            
-        </div>
-    </div>    
+﻿<div ng-controller="ShellController as vm" layout="column" style="min-height: 100%;" ng-cloak>
+    <md-toolbar layout="row" class="md-toolbar-tools">
+        <md-button class="menu md-icon-button" ng-click="vm.toggleList()" aria-label="Show User List">
+            <md-icon md-font-icon="menu">menu</md-icon>
+        </md-button>
+        <h1>Angular1 - base</h1>
+    </md-toolbar>
+    <div flex layout="row">
+
+        <!-- Container #3 -->
+        <md-sidenav class="md-whiteframe-4dp" md-component-id="left-sidenav">
+            <md-toolbar layout="row" class="md-toolbar-tools">
+                <h1>A1</h1>
+                <span class="fill-remaining-space"></span>
+                <md-button class="menu md-icon-button" ng-click="vm.toggleList()" aria-label="Show User List">
+                    <md-icon md-font-icon="close">close</md-icon>
+                </md-button>
+            </md-toolbar>
+            <sk-navigation></sk-navigation>
+        </md-sidenav>
+
+        <!-- Container #4 -->
+        <md-content flex id="content">
+             <div ng-view class="fade-animation"></div>
+        </md-content>
+
+    </div>
 </div>

@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    var content = angular.module('app.content', []);
+    var content = angular.module('content', []);
 
     content.config(['$routeProvider', 'baseUrl', function ($routeProvider, baseUrl) {
         $routeProvider.when('/', {
@@ -23,14 +23,7 @@
             controllerAs: 'vm',
             caseInsensitiveMatch: true,
             showNav: 'features'
-        })
-        .when('/securedWebapiDemo', {
-            templateUrl: baseUrl + 'content/securedWebapiDemo/securedWebapiDemo.html',
-            controller: 'SecuredWebapiDemoController',
-            controllerAs: 'vm',
-            caseInsensitiveMatch: true,
-            showNav: 'Secured Web API demo'
-        })
+        })    
         .otherwise('/');
     }]);
 

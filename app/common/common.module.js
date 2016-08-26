@@ -1,5 +1,5 @@
 ﻿(function () {
     'use strict';
 
-    var common = angular.module('app.common', []);
+    var common = angular.module('common', []);
 })();

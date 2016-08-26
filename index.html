@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<base href="/app/" />
+
+<head>
+    <title>Angular1 base app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+    <div class="shell" ng-include="'shell/shell.html'">
+    </div>
+    <!--vendor scripts-->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <!--app scripts-->
+    <script src="app.js"></script>
+    <script src="common/common.module.js"></script>
+    <script src="common/utility.service.js"></script>
+    <script src="core/core.module.js"></script>    
+    <script src="core/app-activity.service.js"></script>    
+    <script src="core/app-status.service.js"></script>    
+    <script src="core/navigation.service.js"></script>    
+    <script src="core/sk-app-ready.directive.js"></script>    
+    <script src="core/sk-disable-when-busy.directive.js"></script>    
+    <script src="core/sk-focus-on-set-pristine.directive.js"></script>  
+    <script src="core/storage.service.js"></script>          
+    <script src="shell/shell.module.js"></script>
+    <script src="shell/shell.controller.js"></script>
+    <script src="shell/sk-navigation.component.js"></script>
+    <script src="content/content.module.js"></script>
+    <script src="content/features/features.controller.js"></script>
+    <script src="content/welcome/welcome.controller.js"></script>
+</body>
+
+</html>

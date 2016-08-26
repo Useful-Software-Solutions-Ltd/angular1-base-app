@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-    var core = angular.module('app.core', ['app.common']);
+    var core = angular.module('core', ['common']);
 
     core.config(['$provide', function ($provide) {
         $provide.constant("baseUrl", ""); //url to the server location of the spa (requires trailing slash)

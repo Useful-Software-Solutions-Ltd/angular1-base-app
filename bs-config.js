@@ -1,5 +1,5 @@
 //set the start directory and file the middleware 1 will then ensure that all non file routes get redirected back to the SPA
-var startDir = '/app';
+var startDir = '';
 var startFile = 'index.html';
 var startPath = startDir + '/' + startFile;
 
