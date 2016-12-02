@@ -4,9 +4,9 @@
     angular.module('content')
         .controller('FeaturesController', FeaturesController);
 
-    FeaturesController.$inject = [ 'appActivityService'];
+    FeaturesController.$inject = ['$scope', 'appActivityService'];
 
-    function FeaturesController( appActivityService) {
+    function FeaturesController($scope, appActivityService) {
         /* jshint validthis:true */
         var vm = this;
 
