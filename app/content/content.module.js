@@ -4,24 +4,17 @@
     var content = angular.module('content', []);
 
     content.config(['$routeProvider', 'baseUrl', function ($routeProvider, baseUrl) {
+        $routeProvider.caseInsensitiveMatch = true;
+
         $routeProvider.when('/', {
-            templateUrl: baseUrl + 'content/welcome/welcome.html',
-            controller: 'WelcomeController',
-            controllerAs: 'vm',
-            caseInsensitiveMatch: true
+            template: '<welcome></welcome>',            
         })
         .when('/welcome', {
-            templateUrl: baseUrl + 'content/welcome/welcome.html',
-            controller: 'WelcomeController',
-            controllerAs: 'vm',
-            caseInsensitiveMatch: true,
+            template: '<welcome></welcome>',          
             showNav: 'welcome'
         })
         .when('/features', {
-            templateUrl: baseUrl +'content/features/features.html',
-            controller: 'FeaturesController',
-            controllerAs: 'vm',
-            caseInsensitiveMatch: true,
+            template: '<features></features>',         
             showNav: 'features'
         })    
         .otherwise('/');

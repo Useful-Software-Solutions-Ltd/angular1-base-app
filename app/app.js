@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    var app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngMaterial', 'core', 'shell', 'content']);
+    var app = angular.module('app', ['ngRoute', 'ngAria', 'ngAnimate', 'ngMaterial', 'core', 'shell', 'content']);
 
     app.config(config);
 
